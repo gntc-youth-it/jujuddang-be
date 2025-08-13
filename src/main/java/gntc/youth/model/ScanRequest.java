@@ -1,4 +1,6 @@
 package gntc.youth.model;
 
-public record ScanRequest(Integer teamNumber, String placeName) {
+import gntc.youth.domain.Stage;
+
+public record ScanRequest(Integer teamNumber, Stage stage) {
 }

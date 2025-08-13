@@ -22,5 +22,9 @@ public class TeamRouteStep {
 
     private int stepIndex;
 
-    private String placeName;
+    @Enumerated(EnumType.STRING)
+    private Stage stage;
+
+    @Enumerated(EnumType.STRING)
+    private Site site;
 }

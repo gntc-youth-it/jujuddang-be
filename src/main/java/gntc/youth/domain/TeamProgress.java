@@ -21,4 +21,22 @@ public class TeamProgress {
 
     @Version
     private int version;
+
+    public TeamProgress(Integer teamNumber) {
+        this.teamNumber = teamNumber;
+    }
+
+    public void nextStep() {
+        if (finished) {
+            throw new IllegalStateException("Cannot advance, team has already finished.");
+        }
+        currentIndex++;
+    }
+
+    public void finish() {
+        if (finished) {
+            throw new IllegalStateException("Team has already finished.");
+        }
+        finished = true;
+    }
 }
